@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import UserContext from "./UserContext";
 
-const Context = ({ children }) => {
+export const MyContext = React.createContext();
+
+const MyContextProvider = ({ children }) => {
   const [videoData, setVideoData] = useState([]);
   const [newVideo, setNewVideo] = useState(false);
   const [videoInfo, setVideoInfo] = useState({
@@ -90,7 +91,7 @@ const Context = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider
+    <MyContext.Provider
       value={{
         videoData,
         setVideoData,
@@ -107,8 +108,8 @@ const Context = ({ children }) => {
       }}
     >
       {children}
-    </UserContext.Provider>
+    </MyContext.Provider>
   );
 };
 
-export default Context;
+export default MyContextProvider;

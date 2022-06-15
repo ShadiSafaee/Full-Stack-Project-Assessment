@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import UserContext from "../../context/UserContext";
+import { MyContext } from "../../context/Context";
 import Vote from "./Vote";
 import "../../styles/videocard.css";
 
 const VideoCard = ({ video }) => {
   const [vote, setVote] = useState(0);
-  const { deleteHandler } = useContext(UserContext);
+  const { deleteHandler } = useContext(MyContext);
   return (
     <>
       <section className="video_card">

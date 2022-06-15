@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import UserContext from "../../context/UserContext";
+import { MyContext } from "../../context/Context";
 import VideoCard from "./VideoCard";
 import NewVideo from "./NewVideo";
 import "../../styles/videocards.css";
 
 const VideoCards = () => {
-  const { videoData, setNewVideo, newVideo } = useContext(UserContext);
+  const { videoData, setNewVideo, newVideo } = useContext(MyContext);
 
   return (
     <article>

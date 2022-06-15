@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "../../styles/newvideo.css";
-import UserContext from "../../context/UserContext";
+import { MyContext } from "../../context/Context";
 
 const NewVideo = () => {
   const { setNewVideo, videoInfo, handleChange, addNewVideoHandler } =
-    useContext(UserContext);
+    useContext(MyContext);
 
   return (
     <article className="newvideo_container">
